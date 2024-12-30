@@ -12,6 +12,12 @@ Each file in this repository represents a single challenge, providing:
 - **Code implementation** to tackle the challenge.
 - Some files may include **comments** or **explanations** for better understanding.
 
+## Directory Structure
+
+- `Beginner/`: Basic programming challenges suitable for beginners
+- `Intermediate/`: More complex challenges requiring deeper Python knowledge
+- `Real-World/`: Practical challenges based on real-world scenarios
+
 ## Purpose
 
 The goal of this repository is to:
