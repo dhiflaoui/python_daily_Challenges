@@ -1,3 +1,35 @@
+"""
+Challenge Title: Supermarket Billing System
+
+Description:
+Create a supermarket billing system that allows users to:
+1. Input multiple items with their prices and quantities
+2. Calculate subtotal, tax, and discounts
+3. Generate a detailed bill summary
+
+Examples:
+Input: 
+- Item 1: Butter, Price: $5.00, Quantity: 2
+- Item 2: Eggs, Price: $3.00, Quantity: 1
+
+Output:
+--- Bill Summary ---
+Butter: 2 x $5.00 = $10.00
+Eggs: 1 x $3.00 = $3.00
+Subtotal: $13.00
+Discount: $1.15 (10% on butter, 5% on eggs)
+Tax (5%): $0.65
+Total: $12.50
+
+Notes:
+- Handles invalid inputs gracefully
+- Supports special discounts for specific items
+- Includes 5% tax rate on purchases
+- Provides clear, formatted output
+
+Tags: real-world, input-handling, calculations, formatting
+"""
+
 def main():
     print("Welcome to the Supermarket Billing System!\n")
 
@@ -49,14 +81,12 @@ def main():
     tax = subtotal * tax_rate
     total = subtotal - total_discount + tax
 
-    # Print summary
+    # Display final calculations
     print(f"\nSubtotal: ${subtotal:.2f}")
-    print(f"Discount: ${total_discount:.2f}")
-    print(f"Sales Tax (5%): ${tax:.2f}")
+    if total_discount > 0:
+        print(f"Discount: ${total_discount:.2f}")
+    print(f"Tax (5%): ${tax:.2f}")
     print(f"Total: ${total:.2f}")
-
-    print("\nThank you for shopping with us!")
-
 
 if __name__ == "__main__":
     main()
