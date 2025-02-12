@@ -24,6 +24,6 @@ print(characters)
 # Generate a random name of 10 characters
 random_name = ''.join(random.choice(characters) for _ in range(10))
 # Create a new text file with the random name
-# f = open(random_name + ".txt", "w")
-# f.write(random_name)
-# f.close()
+f = open(random_name + ".txt", "w")
+f.write(random_name)
+f.close()
